@@ -14,7 +14,7 @@ const Navbar = () => {
             <Link to="/peliculas">Peliculas</Link>
           </li>
           <li className="nav-item mx-3">
-          <Link to="/programas_tv">Programas de television</Link>
+          <Link to="/programastv">Programas de television</Link>
           </li>
           <li className="nav-item mx-3">
           <Link to="/personas">Personas</Link>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import CardsProgTV from "../components/CardsPersonas";
+import CardsProgTV from "../components/CardsProgTV";
 const ProgramasTV = () => {
     const[prog, setProg]=useState([]);
     console.log(prog)
@@ -12,10 +12,10 @@ const ProgramasTV = () => {
     },[])
 
     return ( 
-        <div>
+        <div className="row">
             {prog.map(item=>
-            <div >
-                <CardsProgTV original_name={item.original_name} backdrop_path={item.backdrop_path}/>
+            <div className="col-lg-3">
+                <CardsProgTV name={item.original_name} url={item.poster_path}/>
             </div>)} 
         </div>
     
