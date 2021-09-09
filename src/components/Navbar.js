@@ -2,8 +2,8 @@ import {Link} from "react-router-dom"
 const Navbar = () => {
     return ( 
         <>
-    <nav className="navbar navbar-expand-lg bg-info mb-2 ml-5">
-    <Link to="/">Kino</Link>
+    <nav className="navbar navbar-expand-lg bg-info mb-2 ml-5">  
+    <Link className="navbar-brand" to="/">Kino</Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -14,10 +14,10 @@ const Navbar = () => {
             <Link to="/peliculas">Peliculas</Link>
           </li>
           <li className="nav-item mx-3">
-          <Link to="/programastv">Programas de television</Link>
+          <Link to="/personas">Personas</Link>
           </li>
           <li className="nav-item mx-3">
-          <Link to="/personas">Personas</Link>
+          <Link to="/programastv">Programas de television</Link>
           </li>
         </ul>
       </div>

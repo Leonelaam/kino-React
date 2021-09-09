@@ -1,30 +1,22 @@
-import img1 from "../assets/img/img1.jpeg"
-import img2 from "../assets/img/img2.jpeg"
-import img3 from "../assets/img/img3.jpeg"
+// import img1 from "../assets/img/img1.jpeg"
+// import img2 from "../assets/img/img2.jpeg"
+// import img3 from "../assets/img/img3.jpeg"
+import React, { useState, useEffect } from 'react';
+import Carousel from "../components/Carousel";
+
 const Home = () => {
+  const [home, setHome]= useState([]);
+  console.log(home)
+
+  useEffect(()=>{
+    fetch ('https://api.themoviedb.org/3/movie/popular?api_key=64b73d43a55a920af8890d10d8de7724')
+    .then(response=>response.json())
+    .then(data=>setHome(data.results));
+  }, [])
+
     return ( 
         <div>
-            <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
-  <div className="carousel-inner">
-    <div className="carousel-item active">
-      <img src={img1} className="d-block w-100" alt="..."/>
-    </div>
-    <div className="carousel-item">
-      <img src={img2} className="d-block w-100" alt="..."/>
-    </div>
-    <div className="carousel-item">
-      <img src={img3} className="d-block w-100" alt="..."/>
-    </div>
-  </div>
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Next</span>
-  </button>
-</div>
+           <Carousel home={home}/> 
         </div>
      );
 }

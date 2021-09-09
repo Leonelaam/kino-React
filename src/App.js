@@ -6,6 +6,7 @@ import Peliculas from "./views/Peliculas";
 import Personas from "./views/Personas";
 import ProgramasTV from "./views/ProgramasTV";
 import Home from "./views/Home"
+import MovieDetails from "./components/MovieDetails";
 //import NotFound from "./components/NotFound"
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route exact path="/peliculas">
         <Peliculas/>
+        </Route>
+        <Route exact path="/peliculas/:id">
+        <MovieDetails/>
         </Route>
         <Route exact path="/personas">
         <Personas/>
