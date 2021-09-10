@@ -14,7 +14,7 @@ const Peliculas = () => {
         <div className="row">
             {film.map(item=>
             <div className="col-lg-3">
-            <CardsPelis title={item.original_title} date={item.release_date} url={item.poster_path} id={item.id}/>
+            <CardsPelis className="border" title={item.original_title} date={item.release_date} url={item.poster_path} id={item.id}/>
             </div>)} 
         </div>
     
