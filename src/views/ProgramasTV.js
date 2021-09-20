@@ -12,9 +12,9 @@ const ProgramasTV = () => {
     },[])
 
     return ( 
-        <div className="row">
+        <div className="row p-3">
             {prog.map(item=>
-            <div className="col-lg-3">
+            <div className="col-lg-3 col-sm-12">
                 <CardsProgTV name={item.original_name} url={item.poster_path}/>
             </div>)} 
         </div>

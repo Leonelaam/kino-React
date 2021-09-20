@@ -11,9 +11,9 @@ const Peliculas = () => {
     }, [])
 
     return (    
-        <div className="row">
+        <div className="row p-3">
             {film.map(item=>
-            <div className="col-lg-3">
+            <div className="col-lg-3 col-sm-12">
             <CardsPelis className="border" title={item.original_title} date={item.release_date} url={item.poster_path} id={item.id}/>
             </div>)} 
         </div>

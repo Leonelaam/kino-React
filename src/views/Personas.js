@@ -12,9 +12,9 @@ const Personas = () => {
     },[])
 
     return ( 
-        <div className="row">
+        <div className="row  p-3">
             {person.map(item=>
-            <div className="col-lg-3">
+            <div className="col-lg-3 col-sm-12">
             <CardsPersonas name={item.name} profile_path={item.profile_path}/>
             </div>)} 
         </div>

@@ -17,6 +17,7 @@ const Home = () => {
     return ( 
         <div>
            <Carousel home={home}/> 
+           
         </div>
      );
 }
